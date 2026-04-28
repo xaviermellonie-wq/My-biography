@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Biography</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e44ad 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            max-width: 550px;
+            width: 100%;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.7s;
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        /* JUDUL BESAR */
+        .main-title {
+            color: #2c3e50;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .sub-title {
+            color: #7e44ad;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        /* STYLE FOTO PROFIL */
+        .foto-profil {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid #f0f0f0;
+            box-shadow: 0 10px 25px rgba(118, 75, 162, 0.3);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .foto-profil:hover {
+            transform: scale(1.06);
+        }
+
+        /* STYLE BOX KOTAK-KOTAK */
+        .box {
+            border-radius: 18px;
+            padding: 22px;
+            margin: 20px 0;
+            text-align: left;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .box h3 {
+            font-size: 19px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+        }
+
+        .box p, .box ul {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #2d3436;
+        }
+
+        .box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .box ul li {
+            padding: 7px 0;
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+        }
+
+        /* WARNA MASING-MASING BOX */
+        .box-about { background: #e8f4fc; border-left: 7px solid #3498db; }
+        .box-about h3 { color: #2980b9; }
+
+        .box-nature { background: linear-gradient(45deg, #ffeaa7, #fdcb6e); border-left: 7px solid #f39c12; }
+        .box-nature h3 { color: #d35400; }
+
+        .box-health { background: #dff9fb; border-left: 7px solid #2ecc71; }
+        .box-health h3 { color: #27ae60; }
+
+        .box-food { background: #fff5f5; border-left: 7px solid #e74c3c; }
+        .box-food h3 { color: #c0392b; }
+
+        .box-drink { background: #f0f8ff; border-left: 7px solid #5dade2; }
+        .box-drink h3 { color: #2e86c1; }
+
+        .box-dessert { background: #fdf2e9; border-left: 7px solid #e67e22; }
+        .box-dessert h3 { color: #ca6f1e; }
+
+        .quote-box {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 25px;
+            border-radius: 18px;
+            margin-top: 25px;
+            font-style: italic;
+            font-size: 15px;
+            line-height: 1.8;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-size: 60px;
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            opacity: 0.3;
+        }
+
+        .highlight {
+            font-weight: 700;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+
+    <!-- JUDUL -->
+    <h1 class="main-title">MY GROUP</h1>
+    <p class="sub-title">MY BIOGRAPHY</p>
+
+    <!-- FOTO KAMU -->
+    <img src="c:\Users\ASUS\OneDrive\Pictures\Camera Roll\JPG.jpeg" alt="Fotoku 1" class="foto-profil">
+    <p style="color:#7e44ad; font-weight:bold; margin-top:-20px; margin-bottom:20px;">📸</p>
+
+    <!-- MULAI DARI SINI SEMUA BIODATA -->
+
+    <!-- BAGIAN 1: TENTANG SAYA -->
+    <div class="box box-about">
+        <h3>👤 About Me</h3>
+        <p>
+            Hello everyone! My name is <span class="highlight">Adinda Agnes</span> and I come from the beautiful country of <strong>Indonesia 🇮🇩</strong>. I am a simple person who has big dreams and a very strong passion for life. I always try to be a good person, honest, and hardworking in everything I do.
+        </p>
+    </div>
+
+    <!-- BAGIAN 2: HOBI -->
+    <div class="box box-about">
+        <h3>👨‍🍳 My Hobbies</h3>
+        <p>
+            I really love <strong>cooking 🍳</strong>. For me, cooking is not just about making food, but it is also an art and a way to express my creativity. I love exploring new recipes. Besides that, I also love <strong>trying new things ✨</strong>. I believe that life is an adventure where we should never be afraid to learn and experience something different to grow better.
+        </p>
+    </div>
+
+    <!-- BAGIAN 3: CINTA ALAM -->
+    <div class="box box-nature">
+        <h3>🌅 I Love Nature</h3>
+        <p>
+            I have a very deep love for nature. I really like <strong>Sunrise and Sunset 🌅</strong>. The beautiful colors of the sky in the morning and evening make my heart feel calm and peaceful. I also really love the <strong>Ocean 🌊</strong> and the <strong>Mountains 🏔️</strong>. Nature gives me positive energy, happiness, and makes me feel more confident every day.
+        </p>
+    </div>
+
+    <!-- BAGIAN 4: HIDUP SEHAT -->
+    <div class="box box-health">
+        <h3>💪 Healthy Life!</h3>
+        <p>
+            I am a person who really loves <strong>HEALTHY LIFE! 🥗💪</strong>. I love working out, exercising, and maintaining a healthy lifestyle every day. I am very disciplined and I always push my limits to become the best version of myself. For me, being healthy is the key to happiness and success in life.
+        </p>
+    </div>
+
+    <!-- BAGIAN 5: MAKANAN FAVORIT -->
+    <div class="box box-food">
+        <h3>🍽️ Favorite Foods</h3>
+        <ul>
+            <li>🍚 <span>Fried Rice (Nasi Goreng)</span></li>
+            <li>🍗 <span>Grilled Chicken (Ayam Bakar)</span></li>
+            <li>🍢 <span>Chicken Satay (Sate Ayam)</span></li>
+            <li>🥓 <span>Grilled Pork (Babi Panggang)</span></li>
+            <li>🍡 <span>Pork Satay (Sate Babi)</span></li>
+            <li>🥘 <span>Tofu and Tempeh (Tahu & Tempe)</span></li>
+            <li>🌶️ <span>Sweet Spicy Chili (Sambal Sedikit Manis)</span></li>
+        </ul>
+    </div>
+
+    <!-- BAGIAN 6: MINUMAN FAVORIT -->
+    <div class="box box-drink">
+        <h3>🥤 Favorite Drinks</h3>
+        <ul>
+            <li>💧 <span>Plain Water (Air Putih)</span></li>
+            <li>🍵 <span>Matcha</span></li>
+            <li>🍫 <span>Chocolate</span></li>
+            <li>🍓 <span>Strawberry</span></li>
+            <li>🍋 <span>Lemon Tea</span></li>
+        </ul>
+    </div>
+
+    <!-- BAGIAN 7: DESSERT FAVORIT -->
+    <div class="box box-dessert">
+        <h3>🍰 Favorite Desserts</h3>
+        <ul>
+            <li>☕ <span>Tiramisu (Very delicious!)</span></li>
+            <li>🍫 <span>Chocolate Tiramisu</span></li>
+            <li>🍓 <span>Chocolate Strawberry</span></li>
+            <li>🧁 <span>All kinds of Chocolate 🍫❤️</span></li>
+        </ul>
+        <p style="margin-top:15px; font-style:italic;">
+            I really love everything that contains <strong>Chocolate 🍫</strong>. For me, chocolate is everything and it makes me very happy! 😋
+        </p>
+    </div>
+
+    <!-- BAGIAN QUOTES -->
+    <div class="quote-box">
+        "Healthy Life, Happy Life! 💪🥗 Believe in yourself, trust the process, and keep moving forward. Your only limit is your own mind. Enjoy every moment and always be grateful." ✨
+    </div>
+
+</div>
+
+</body>
+</html>
